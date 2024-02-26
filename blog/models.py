@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.db.models.signals import post_save
 
 # Create your models here.
 class Post(models.Model):
@@ -29,9 +30,9 @@ class Comment(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    first_name = models.CharField()
-    last_name = models.CharField()
-    instagram = models.CharField()
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    instagram = models.CharField(max_length=200)
     email = models.EmailField()
     image = CloudinaryField('image', default='placeholder')
 

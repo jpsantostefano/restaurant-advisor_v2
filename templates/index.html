@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Advisor</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div>
+            <p>Logo</p>
+        </div>
+
+        <div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Logout</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Restaurant Advisor</h1>
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <p>Discover your next dining adventure with our Restaurant Advisor website. Explore client reviews, recommendations, and insider tips to find the perfect restaurant for every occasion.</p>
+    </header>
+
+    <section>
+        <h2>Selected restaurants</h2>
+        <div class="posts-grid">
+            {% for post in posts %}  
+            <div>
+                    
+                    <p><b>{{ post.title }}</b></p>
+                    <br>
+                    {% if post.image %}
+                    <img src="{{ post.image.url }}" width="300px" height="200px">
+                    {% endif %}
+                    <p>{{ post.type }}</p>
+                    <a class="reviews-link" href="">Reviews</a>
+                    
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer>
+        <p>footer</p>
+    </footer>
+</body>
+</html>
