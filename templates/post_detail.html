@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<section class="post-detail-section">
+
+    <div>
+        <h1>{{ post.title }}</h1>
+        {% if post.image %}
+        <img src="{{ post.image.url }}" width="300px" height="200px" alt="restaurant-image">
+        {% endif %}
+        <p><strong>{{ post.type }}</strong></p>
+        <p>{{ post.description }}</p>
+        <hr>
+    </div>
+    
+</section>
+
+{% endblock content %}

@@ -109,8 +109,15 @@ footer {
 }
 
 section{
-    text-align: center;
     height: 45vh;
     padding-top: 30px;
 }
 
+.index-section{
+  text-align: center;
+}
+
+.post-detail-section{
+  margin-left: 100px;
+  margin-right: 100px;
+}
