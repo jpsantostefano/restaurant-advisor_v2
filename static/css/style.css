@@ -1,5 +1,5 @@
 
-body {
+html, body {
     margin: 0;
     padding: 0;
     overflow: auto;
@@ -33,12 +33,38 @@ header {
     padding: 70px;
 }
 
+/***** FOOTER *****/
 footer {
+    padding: 15px;
     background-color:#2C3D50;
-    height: 100px;
+    height: 130px;
     color: white;
+    text-align: center;
 }
 
+.social-media{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.social-media a{
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 10px;
+
+}
+
+.copyright{
+    background-color: #1A252F;
+    height: 50px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .divider-custom {
     margin: 1.25rem 0 1.5rem;
@@ -80,8 +106,6 @@ footer {
 
 section{
     text-align: center;
-}
-
-.reviews-link{
-
+    height: 45vh;
+    padding-top: 30px;
 }
