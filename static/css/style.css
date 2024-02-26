@@ -42,10 +42,6 @@ footer {
     text-align: center;
 }
 
-.social-media{
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
 
 .social-media a{
     color: #fff;
@@ -54,7 +50,15 @@ footer {
     border-radius: 50%;
     border: 2px solid #fff;
     padding: 10px;
+}
 
+.social-media a:hover {
+    color: #2C3D50;
+}
+
+.icons{
+  display: flex;
+  justify-content: center;
 }
 
 .copyright{
@@ -109,3 +113,4 @@ section{
     height: 45vh;
     padding-top: 30px;
 }
+

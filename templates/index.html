@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Advisor</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
     <nav>
@@ -44,10 +44,10 @@
                     <p><b>{{ post.title }}</b></p>
                     <br>
                     {% if post.image %}
-                    <img src="{{ post.image.url }}" width="300px" height="200px">
+                    <img src="{{ post.image.url }}" width="300px" height="200px" alt="restaurant-image">
                     {% endif %}
                     <p>{{ post.type }}</p>
-                    <a class="reviews-link" href="">Reviews</a>
+                    <a href="">Reviews</a>
                     
             </div>
             {% endfor %}
@@ -59,10 +59,12 @@
         <h4 class="text-uppercase mb-4">Social Media</h4>
 
         <div class="social-media">
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
-            <a href="https://twitter.com/home" target="_blank"><i class="fab fa-fw fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
-            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-fw fa-youtube"></i></a>
+            <div class="icons">
+                <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><box-icon color="white" type='logo' name='facebook' animation="tada-hover"></box-icon></a>
+                <a href="https://twitter.com/home" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><box-icon color="white" name='twitter' type='logo' animation="tada-hover"></box-icon></a>
+                <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><box-icon color="white" name='linkedin' type='logo' animation="tada-hover"></box-icon></a>
+                <a href="https://www.youtube.com/" aria-label="Youtube" target="_blank" rel="noopener noreferrer"><box-icon color="white" name='youtube' type='logo' animation="tada-hover"></box-icon></a>
+            </div>
         </div>
             
     </footer>
